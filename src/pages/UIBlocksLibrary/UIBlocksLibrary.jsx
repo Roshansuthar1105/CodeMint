@@ -11,6 +11,7 @@ import StatsDashboard from "./blocks/StatsDashboard";
 import UserProfile from "./blocks/UserProfile";
 import ModernCard from "./blocks/ModernCard";
 import NotificationAlert from "./blocks/NotificationAlert";
+import InteractiveForm from "./blocks/InteractiveForm";
 
 // Import icons
 import {
@@ -54,6 +55,7 @@ const UIBlocksLibrary = () => {
     ModernCard,
     StatsDashboard,
     UserProfile,
+    InteractiveForm
   };
 
   useEffect(() => {
