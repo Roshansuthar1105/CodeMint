@@ -14,6 +14,7 @@ import {
   FiSun,
   FiMoon,
 } from "react-icons/fi";
+import SearchBar from "./SearchBar";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const location = useLocation();
@@ -53,6 +54,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   🎨 CodeMint
                 </span>
               </Link>
+            </div>
+
+            {/* Search Bar */}
+            <div className="hidden md:flex flex-1 max-w-xl mx-6 items-center h-full">
+              <div className="w-full py-2">
+                <SearchBar className="w-full" />
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -161,6 +169,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 >
                   <FiX className="w-5 h-5" />
                 </button>
+              </div>
+
+              {/* Mobile Search */}
+              <div className="p-4 border-b border-gray-200 dark:border-slate-800">
+                <SearchBar mobile={true} />
               </div>
 
               {/* Navigation Links */}
