@@ -255,5 +255,16 @@
     "contributor": "Ansh Garg",
     "contributor_github": "https://github.com/Anshgarg9166",
     "tags": ["loader", "liquid", "water", "progress-bar", "animation", "scoped"]
+  },
+  {
+    "name": "Infinite Bouncing Balls Loader",
+    "type": "animation",
+    "previewClass": "loading-animation",
+    "css": "body {\n  background: #ddd;\n}\n.loading-animation {\n  width: 200px;\n  height: 150px;\n  position: relative;\n  margin: auto;\n}\n.first-ball, .second-ball, .third-ball {\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  background: #4286f4;\n  border-radius: 50%;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  animation: horizontal 2s infinite, vertical 1s infinite, color 3s infinite;\n  animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1), ease-in-out;\n  box-shadow: 0 0 15px rgba(0,0,0,0.4);\n}\n.second-ball {\n  animation-delay: 0.2s, 0.45s;\n  opacity: 0.7;\n}\n.third-ball {\n  animation-delay: 0.4s, 0.65s;\n  opacity: 0.5;\n}\n@keyframes horizontal {\n  0%,100% { transform: translate(calc(-50% - 120px), -50%); }\n  50%     { transform: translate(calc(-50% + 120px), -50%); }\n}\n@keyframes vertical {\n  0%,100% { margin-top: -40px; }\n  50%     { margin-top: 40px; }\n}\n@keyframes color {\n  50% { background:#cd43ef; }\n}",
+    "html": "<div class=\"loading-animation\">\n  <span class=\"first-ball\"></span>\n  <span class=\"second-ball\"></span>\n  <span class=\"third-ball\"></span>\n</div>",
+    "js": "",
+    "contributor": "Ansh Garg",
+    "contributor_github": "https://github.com/https://github.com/Anshgarg9166",
+    "tags": ["loader", "balls", "bouncing", "animation"]
   }
 ]
