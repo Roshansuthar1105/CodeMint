@@ -190,6 +190,16 @@
         ],
         "contributor": "Aryan Agarwal",
         "contributor_github":"https://github.com/Aryanam031"
+    },
+    {
+        "title": "Glowing Divider",
+        "path": "GlowingDivider",
+        "tags": [
+            "Button",
+            "UI"
+        ],
+        "contributor": "Aryan Agarwal",
+        "contributor_github":"https://github.com/Aryanam031"
     }
 ]
 
