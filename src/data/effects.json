@@ -289,4 +289,15 @@
     "contributor_github": "https://github.com/Anshgarg9166",
     "tags": ["animation", "sun", "day-night", "css", "scoped", "compact"]
   }
+
+  ,{
+  "name": "Crystal Glow Hover",
+  "type": "hover",
+  "previewClass": "crystal-glow",
+  "css": ".crystal-glow { position: relative; transition: all 0.4s ease; } .crystal-glow:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 150, 255, 0.6); }",
+  "contributor": "Namokar Jain",
+  "contributor_github": "https://github.com/Namokar05",
+  "tags": ["hover", "glow", "ui-effect"]
+}
+
 ]
