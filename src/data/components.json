@@ -125,6 +125,17 @@
         ],
         "contributor": "Tanisha Jain",
         "contributor_github":"https://github.com/itanishajain"
+    },
+    {
+        "title": "Gradient Orbit Loader",
+        "path": "GradientOrbitLoader",
+        "tags": [
+           
+            "animation",
+            "UI"
+        ],
+        "contributor": "Tanisha Jain",
+        "contributor_github":"https://github.com/itanishajain"
     }
 ]
 
