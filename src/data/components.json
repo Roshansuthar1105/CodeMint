@@ -81,6 +81,16 @@
         ],
         "contributor": "Rupesh Kumar",
         "contributor_github":"https://github.com/rupeshhkumarr"
+    },{
+        "title": "Parallax Tilt Card",
+        "path": "ParallaxTiltCard",
+        "tags": [
+           
+            "animation",
+            "UI"
+        ],
+        "contributor": "Tanisha Jain",
+        "contributor_github":"https://github.com/itanishajain"
     }
 
 ]
