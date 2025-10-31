@@ -233,5 +233,16 @@
       "css",
       "modern-ui"
     ]
+  },
+  {
+    "name": "Bouncing Balls Shadow Loader",
+    "type": "animation",
+    "previewClass": "ball-loader",
+    "css": "body {\n  background: white;\n}\n\n.ball-loader {\n  width: 200px;\n  height: 60px;\n  margin: auto;\n  margin-top: 40%;\n  margin-left: 50%;\n  transform: translate(-50%, -50%);\n  position: relative;\n}\n\n.ball-loader .ball {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  border-radius: 50%;\n  left: 15%;\n  animation: ball .5s alternate infinite ease;\n}\n\n@keyframes ball {\n  0% {\n    top: 60px;\n    height: 5px;\n    border-radius: 50px 50px 25px 25px;\n    transform: scaleX(1.7);\n    background-color: #FF3EA5FF;\n  }\n  40% {\n    height: 20px;\n    border-radius: 50%;\n    transform: scaleX(1);\n    background-color: #EDFF00FF;\n  }\n  100% {\n    top: 0%;\n    background-color: #00A4CCFF;\n  }\n}\n\n.ball-loader .ball:nth-child(2) {\n  left: 45%;\n  animation-delay: .2s;\n}\n\n.ball-loader .ball:nth-child(3) {\n  right: 15%;\n  left: auto;\n  animation-delay: .3s;\n}\n\n.ball-loader .shadow {\n  width: 20px;\n  height: 4px;\n  border-radius: 50%;\n  background-color: #ffffff59;\n  position: absolute;\n  top: 62px;\n  z-index: -1;\n  left: 15%;\n  filter: blur(1px);\n  animation: shadow .5s alternate infinite ease;\n}\n\n@keyframes shadow {\n  0% {\n    transform: scaleX(1.5);\n    background-color: #ff3ea56b;\n  }\n  40% {\n    transform: scaleX(1);\n    opacity: .7;\n    background-color: #edff0066;\n  }\n  100% {\n    transform: scaleX(.2);\n    opacity: .4;\n    background-color: #00a4cc6b;\n  }\n}\n\n.ball-loader .shadow:nth-child(4) {\n  left: 45%;\n  animation-delay: .2s;\n}\n\n.ball-loader .shadow:nth-child(5) {\n  right: 15%;\n  left: auto;\n  animation-delay: .3s;\n}",
+    "html": "<div class=\"ball-loader\">\n  <div class=\"ball\"></div>\n  <div class=\"ball\"></div>\n  <div class=\"ball\"></div>\n  <div class=\"shadow\"></div>\n  <div class=\"shadow\"></div>\n  <div class=\"shadow\"></div>\n</div>",
+    "js": "",
+    "contributor": "Ansh Garg",
+    "contributor_github": "https://github.com/Anshgarg9166",
+    "tags": ["loader", "bouncing", "balls", "shadows", "animation"]
   }
 ]
