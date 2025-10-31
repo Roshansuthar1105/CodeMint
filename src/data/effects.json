@@ -183,14 +183,25 @@
     "tags": ["loader", "dots", "pulse", "minimal", "animation"]
   },
   {
-  "name": "Rotating Ring Loader",
-  "type": "animation",
-  "previewClass": "ring-loader",
-  "css": ".ring-loader {\n  display: inline-flex;\n  width: 64px;\n  height: 64px;\n  margin: 0.75em auto; /* center inside preview area without touching global html/body */\n  justify-content: center;\n  align-items: center;\n}\n\n.ring-loader:after {\n  content: ' ';\n  display: block;\n  width: 46px;\n  height: 46px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 5px solid #fff; /* changed to white */\n  border-color: #fff transparent #fff transparent; /* white ring + transparent gaps */\n  animation: ring-spin 1.2s linear infinite;\n}\n\n@keyframes ring-spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n",
-  "html": "<div class=\"ring-loader\"></div>",
-  "js": "",
-  "contributor": "Shubhrant Tripathi",
-  "contributor_github": "https://github.com/ishubtripathi",
-  "tags": ["loader", "ring", "rotation", "circle", "animation"]
-}
+    "name": "Rotating Ring Loader",
+    "type": "animation",
+    "previewClass": "ring-loader",
+    "css": ".ring-loader {\n  display: inline-flex;\n  width: 64px;\n  height: 64px;\n  margin: 0.75em auto; /* center inside preview area without touching global html/body */\n  justify-content: center;\n  align-items: center;\n}\n\n.ring-loader:after {\n  content: ' ';\n  display: block;\n  width: 46px;\n  height: 46px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 5px solid #fff; /* changed to white */\n  border-color: #fff transparent #fff transparent; /* white ring + transparent gaps */\n  animation: ring-spin 1.2s linear infinite;\n}\n\n@keyframes ring-spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n",
+    "html": "<div class=\"ring-loader\"></div>",
+    "js": "",
+    "contributor": "Shubhrant Tripathi",
+    "contributor_github": "https://github.com/ishubtripathi",
+    "tags": ["loader", "ring", "rotation", "circle", "animation"]
+  },
+  {
+    "name": "3D Hover Card",
+    "type": "animation",
+    "previewClass": "dark-rider-card",
+    "css": ".dark-rider-card {\n  width: 200px;\n  height: 300px;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  padding: 0;\n  perspective: 2500px;\n  margin: 20px auto;\n  background: #191c29;\n  border-radius: 10px;\n}\n\n.dark-rider-card .wrapper {\n  transition: all 0.5s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  overflow: hidden;\n  border-radius: 10px;\n}\n\n.dark-rider-card .cover-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.dark-rider-card:hover .wrapper {\n  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);\n  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);\n}\n\n.dark-rider-card .wrapper::before,\n.dark-rider-card .wrapper::after {\n  content: '';\n  opacity: 0;\n  width: 100%;\n  height: 80px;\n  transition: all 0.5s;\n  position: absolute;\n  left: 0;\n}\n\n.dark-rider-card .wrapper::before {\n  top: 0;\n  height: 100%;\n  background-image: linear-gradient(\n    to top,\n    transparent 46%,\n    rgba(12, 13, 19, 0.5) 68%,\n    rgba(12, 13, 19) 97%\n  );\n}\n\n.dark-rider-card .wrapper::after {\n  bottom: 0;\n  opacity: 1;\n  background-image: linear-gradient(\n    to bottom,\n    transparent 46%,\n    rgba(12, 13, 19, 0.5) 68%,\n    rgba(12, 13, 19) 97%\n  );\n}\n\n.dark-rider-card:hover .wrapper::before,\n.dark-rider-card:hover .wrapper::after {\n  opacity: 1;\n}\n\n.dark-rider-card:hover .wrapper::after {\n  height: 120px;\n}\n\n.dark-rider-card .character {\n  width: 100%;\n  opacity: 0;\n  transition: all 0.5s;\n  position: absolute;\n  z-index: 2;\n  bottom: 0;\n}\n\n.dark-rider-card:hover .character {\n  opacity: 1;\n  transform: translate3d(0%, -30%, 100px);\n}\n\n.dark-rider-card .title {\n  width: 100%;\n  transition: transform 0.5s;\n  position: absolute;\n  bottom: 20px;\n  z-index: 3;\n}\n\n.dark-rider-card:hover .title {\n  transform: translate3d(0%, -50px, 100px);\n}\n",
+    "html": "<div class=\"dark-rider-card\"><div class=\"wrapper\"><img src=\"https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg\" class=\"cover-image\" /></div><img src=\"https://ggayane.github.io/css-experiments/cards/dark_rider-title.png\" class=\"title\" /><img src=\"https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp\" class=\"character\" /></div>",
+    "js": "",
+    "contributor": "Shubhrant Tripathi",
+    "contributor_github": "https://github.com/ishubtripathi",
+    "tags": ["card", "3d", "hover", "animation", "ui"]
+  }
 ]
