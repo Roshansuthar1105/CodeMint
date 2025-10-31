@@ -210,6 +210,16 @@
         ],
         "contributor": "Aryan Agarwal",
         "contributor_github":"https://github.com/Aryanam031"
+    },
+    {
+        "title": "Pulse-Ring Avatar",
+        "path": "PulseRingAvatar",
+        "tags": [
+            "avatar",
+            "UI"
+        ],
+        "contributor": "Aryan Agarwal",
+        "contributor_github":"https://github.com/Aryanam031"
     }
 ]
 
