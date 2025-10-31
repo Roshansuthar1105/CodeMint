@@ -179,7 +179,18 @@
     "html": "<div class=\"pulsing-dots\"><div></div><div></div><div></div></div>",
     "js": "",
     "contributor": "Shubhrant Tripathi",
-    "contributor_github": "https://github.com/ishubtripathii",
+    "contributor_github": "https://github.com/ishubtripathi",
     "tags": ["loader", "dots", "pulse", "minimal", "animation"]
-  }
+  },
+  {
+  "name": "Rotating Ring Loader",
+  "type": "animation",
+  "previewClass": "ring-loader",
+  "css": ".ring-loader {\n  display: inline-flex;\n  width: 64px;\n  height: 64px;\n  margin: 0.75em auto; /* center inside preview area without touching global html/body */\n  justify-content: center;\n  align-items: center;\n}\n\n.ring-loader:after {\n  content: ' ';\n  display: block;\n  width: 46px;\n  height: 46px;\n  margin: 1px;\n  border-radius: 50%;\n  border: 5px solid #fff; /* changed to white */\n  border-color: #fff transparent #fff transparent; /* white ring + transparent gaps */\n  animation: ring-spin 1.2s linear infinite;\n}\n\n@keyframes ring-spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n",
+  "html": "<div class=\"ring-loader\"></div>",
+  "js": "",
+  "contributor": "Shubhrant Tripathi",
+  "contributor_github": "https://github.com/ishubtripathi",
+  "tags": ["loader", "ring", "rotation", "circle", "animation"]
+}
 ]
