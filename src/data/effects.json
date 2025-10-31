@@ -266,5 +266,16 @@
     "contributor": "Ansh Garg",
     "contributor_github": "https://github.com/https://github.com/Anshgarg9166",
     "tags": ["loader", "balls", "bouncing", "animation"]
+  },
+  {
+    "name": "Text Wave Loader",
+    "type": "animation",
+    "previewClass": "text-wave-loader",
+    "css": ".text-wave-loader {\n  display: flex;\n  width: 100vw;\n  height: 20vh;\n  background: black;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n\n.text-wave-loader div {\n  text-align: center;\n}\n\n.text-wave-loader p {\n  display: inline-block;\n  text-transform: uppercase;\n  text-align: center;\n  font-size: 4em;\n  font-family: arial;\n  font-weight: 600;\n  transform: scale(.5);\n  color: #121212;\n  -webkit-text-stroke: 2px gray;\n}\n\n.text-wave-loader p:nth-child(1) { animation: hoverAnim 1s linear infinite; }\n.text-wave-loader p:nth-child(2) { animation: hoverAnim 1s linear infinite .125s; }\n.text-wave-loader p:nth-child(3) { animation: hoverAnim 1s linear infinite .25s; }\n.text-wave-loader p:nth-child(4) { animation: hoverAnim 1s linear infinite .375s; }\n.text-wave-loader p:nth-child(5) { animation: hoverAnim 1s linear infinite .5s; }\n.text-wave-loader p:nth-child(6) { animation: hoverAnim 1s linear infinite .675s; }\n.text-wave-loader p:nth-child(7) { animation: hoverAnim 1s linear infinite .75s; }\n\n@keyframes hoverAnim {\n  0% {\n    transform: scale(.5);\n    color: #121212;\n    -webkit-text-stroke: 2px gray;\n  }\n  20% {\n    transform: scale(1);\n    color: pink;\n    -webkit-text-stroke: 3px red;\n    filter: drop-shadow(0 0 1px black) drop-shadow(0 0 1px black) drop-shadow(0 0 3px red) drop-shadow(0 0 5px red) hue-rotate(10turn);\n  }\n  50% {\n    transform: scale(.5);\n    color: #121212;\n    -webkit-text-stroke: 2px gray;\n  }\n}",
+    "html": "<div class=\"text-wave-loader\">\n  <div>\n    <p>L</p>\n    <p>O</p>\n    <p>A</p>\n    <p>D</p>\n    <p>I</p>\n    <p>N</p>\n    <p>G</p>\n  </div>\n</div>",
+    "js": "",
+    "contributor": "Ansh Garg",
+    "contributor_github": "https://github.com/Anshgarg9166",
+    "tags": ["loader", "text", "wave", "animation"]
   }
 ]
