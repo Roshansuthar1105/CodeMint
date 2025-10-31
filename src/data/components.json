@@ -114,6 +114,17 @@
         ],
         "contributor": "Tanisha Jain",
         "contributor_github":"https://github.com/itanishajain"
+    },
+    {
+        "title": "Wave Text Animation",
+        "path": "WaveTextAnimation",
+        "tags": [
+           
+            "animation",
+            "UI"
+        ],
+        "contributor": "Tanisha Jain",
+        "contributor_github":"https://github.com/itanishajain"
     }
 ]
 
