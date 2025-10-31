@@ -195,7 +195,17 @@
         "title": "Glowing Divider",
         "path": "GlowingDivider",
         "tags": [
-            "Button",
+            "Divider",
+            "UI"
+        ],
+        "contributor": "Aryan Agarwal",
+        "contributor_github":"https://github.com/Aryanam031"
+    },
+    {
+        "title": "Swirl Hover Image",
+        "path": "SwirlHoverImage",
+        "tags": [
+            "animation",
             "UI"
         ],
         "contributor": "Aryan Agarwal",
