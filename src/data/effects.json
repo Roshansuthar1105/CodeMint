@@ -244,5 +244,16 @@
     "contributor": "Ansh Garg",
     "contributor_github": "https://github.com/Anshgarg9166",
     "tags": ["loader", "bouncing", "balls", "shadows", "animation"]
+  },
+  {
+    "name": "Liquid Circle & Bar Loader",
+    "type": "animation",
+    "previewClass": "liquid-loader-container",
+    "css": ".liquid-loader-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 50vh;\n}\n\n.liquid-loader-container .all-loading {\n  text-align: center;\n  display: inline-block;\n}\n\n.liquid-loader-container .loading {\n  height: 200px;\n  width: 200px;\n  border-radius: 50%;\n  background: #009EE5;\n  position: relative;\n  overflow: hidden;\n  margin: auto;\n}\n\n.liquid-loader-container .loading::before {\n  content: \"\";\n  height: 300px;\n  width: 300px;\n  background: #fff;\n  position: absolute;\n  bottom: 100px;\n  left: -50px;\n  border-radius: 40%;\n  animation: ll_rotate1 4s linear infinite;\n}\n\n.liquid-loader-container .loading::after {\n  content: \"\";\n  height: 300px;\n  width: 300px;\n  background: #fff;\n  position: absolute;\n  bottom: 100px;\n  left: -50px;\n  opacity: .6;\n  border-radius: 35%;\n  animation: ll_rotate2 6s linear infinite;\n}\n\n@keyframes ll_rotate1 {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\n@keyframes ll_rotate2 {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\n.liquid-loader-container .loading-text {\n  font-weight: bold;\n  margin: 10px 0;\n  font-family: sans-serif;\n  color: #000;\n}\n\n.liquid-loader-container .box {\n  height: 30px;\n  width: 200px;\n  border: 1px solid #000;\n  position: relative;\n  overflow: hidden;\n  margin: 15px auto;\n}\n\n.liquid-loader-container .box::before {\n  content: \"\";\n  height: 30px;\n  width: 200px;\n  background: linear-gradient(45deg, orange, #009EE5);\n  position: absolute;\n  animation: ll_bar 6s linear infinite;\n}\n\n@keyframes ll_bar {\n  0% { left: -200px; }\n  100% { left: 0px; }\n}",
+    "html": "<div class=\"liquid-loader-container\">\n  <div class=\"all-loading\">\n    <div class=\"loading\"></div>\n    <div class=\"loading-text\">Loading...</div>\n    <div class=\"box\"></div>\n  </div>\n</div>",
+    "js": "",
+    "contributor": "Ansh Garg",
+    "contributor_github": "https://github.com/Anshgarg9166",
+    "tags": ["loader", "liquid", "water", "progress-bar", "animation", "scoped"]
   }
 ]
