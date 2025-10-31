@@ -205,15 +205,33 @@
     "tags": ["card", "3d", "hover", "animation", "ui"]
   },
   {
-  "name": "3D Flip Product Card",
-  "type": "animation",
-  "previewClass": "flip-product-card",
-  "css": ".flip-product-card {\n  width: 250px;\n  height: 350px;\n  perspective: 1000px;\n  margin: 20px auto;\n}\n.card-inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  transition: transform 0.8s;\n  transform-style: preserve-3d;\n}\n.flip-product-card:hover .card-inner {\n  transform: rotateY(180deg);\n}\n.card-front, .card-back {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  backface-visibility: hidden;\n  border-radius: 12px;\n  overflow: hidden;\n}\n.card-front {\n  background: linear-gradient(135deg, #007bff, #00c6ff);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.card-front img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.card-back {\n  background: #111827;\n  color: white;\n  transform: rotateY(180deg);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  text-align: center;\n}\n.card-back h3 {\n  margin-bottom: 10px;\n}\n.card-back p {\n  font-size: 14px;\n  margin-bottom: 15px;\n  color: #ccc;\n}\n.card-back button {\n  background: #00c6ff;\n  border: none;\n  color: white;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n.card-back button:hover {\n  background: #0093e9;\n}",
-  "html": "<div class='flip-product-card'><div class='card-inner'><div class='card-front'><img src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900' alt='Smart Watch'/></div><div class='card-back'><h3>Smart Watch</h3><p>Track your heart rate, sleep, and steps with style.</p><button>Buy Now</button></div></div></div>",
-  "js": "",
-  "contributor": "Tanisha Jain",
-  "contributor_github": "https://github.com/itanishajain",
-  "tags": ["3d", "flip", "product", "animation", "ui"]
-}
-
+    "name": "3D Flip Product Card",
+    "type": "animation",
+    "previewClass": "flip-product-card",
+    "css": ".flip-product-card {\n  width: 250px;\n  height: 350px;\n  perspective: 1000px;\n  margin: 20px auto;\n}\n.card-inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  transition: transform 0.8s;\n  transform-style: preserve-3d;\n}\n.flip-product-card:hover .card-inner {\n  transform: rotateY(180deg);\n}\n.card-front, .card-back {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  backface-visibility: hidden;\n  border-radius: 12px;\n  overflow: hidden;\n}\n.card-front {\n  background: linear-gradient(135deg, #007bff, #00c6ff);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.card-front img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.card-back {\n  background: #111827;\n  color: white;\n  transform: rotateY(180deg);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  text-align: center;\n}\n.card-back h3 {\n  margin-bottom: 10px;\n}\n.card-back p {\n  font-size: 14px;\n  margin-bottom: 15px;\n  color: #ccc;\n}\n.card-back button {\n  background: #00c6ff;\n  border: none;\n  color: white;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: background 0.3s;\n}\n.card-back button:hover {\n  background: #0093e9;\n}",
+    "html": "<div class='flip-product-card'><div class='card-inner'><div class='card-front'><img src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900' alt='Smart Watch'/></div><div class='card-back'><h3>Smart Watch</h3><p>Track your heart rate, sleep, and steps with style.</p><button>Buy Now</button></div></div></div>",
+    "js": "",
+    "contributor": "Tanisha Jain",
+    "contributor_github": "https://github.com/itanishajain",
+    "tags": ["3d", "flip", "product", "animation", "ui"]
+  },
+  {
+    "name": "Dual Stroke Ring Loader",
+    "type": "animation",
+    "previewClass": "ring-loader-preview",
+    "css": ".ring-loader-preview {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n  padding: 20px;\n}\n\n.ring {\n  fill: none;\n  stroke-dasharray: 720 180;\n  stroke-linecap: round;\n  stroke: #ff1251;\n  stroke-width: 30px;\n  animation: progress 3s linear normal infinite;\n}\n\n.left {\n  transform: translate(100px, 0) rotate(90deg);\n}\n\n.right {\n  transform: translate(100px, 200px) rotate(-90deg);\n  animation-delay: 1.5s;\n  animation-direction: reverse;\n}\n\n@keyframes progress {\n  0%, 10% {\n    stroke-dashoffset: 100;\n  }\n  90%, 100% {\n    stroke-dashoffset: -900;\n  }\n}",
+    "html": "<div class=\"ring-loader-preview\">\n  <svg height=\"80\" width=\"160\" viewBox=\"-20 -20 240 240\">\n    <path class=\"ring left\" d=\"M100,0 a100,100 0 0 1 0,200 a100,100 0 0 1 0,-200,0\" />\n    <path class=\"ring right\" d=\"M100,0 a100,100 0 0 1 0,200 a100,100 0 0 1 0,-200,0\" />\n  </svg>\n</div>",
+    "js": "document.title += \" (OGBZ)\";",
+    "contributor": "Ansh Garg",
+    "contributor_github": "https://github.com/Anshgarg9166",
+    "tags": [
+      "loader",
+      "svg",
+      "animation",
+      "stroke",
+      "rings",
+      "css",
+      "modern-ui"
+    ]
+  }
 ]
