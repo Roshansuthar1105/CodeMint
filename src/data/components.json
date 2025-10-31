@@ -180,6 +180,16 @@
         ],
         "contributor": "Aryan Agarwal",
         "contributor_github":"https://github.com/Aryanam031"
+    },
+    {
+        "title": "Rotate-3D Button",
+        "path": "Rotate3DButton",
+        "tags": [
+            "Button",
+            "UI"
+        ],
+        "contributor": "Aryan Agarwal",
+        "contributor_github":"https://github.com/Aryanam031"
     }
 ]
 
