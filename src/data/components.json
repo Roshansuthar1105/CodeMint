@@ -147,6 +147,17 @@
         ],
         "contributor": "Tanisha Jain",
         "contributor_github":"https://github.com/itanishajain"
+    },
+    {
+        "title": "Shimmering BorderCard",
+        "path": "ShimmeringBorderCard",
+        "tags": [
+           
+            "animation",
+            "UI"
+        ],
+        "contributor": "Tanisha Jain",
+        "contributor_github":"https://github.com/itanishajain"
     }
 ]
 
