@@ -157,7 +157,7 @@
     "html": "<div class=\"loader\"></div>",
     "js": "",
     "contributor": "Shubhrant Tripathi",
-    "contributor_github": "https://github.com/shubhranttripathi",
+    "contributor_github": "https://github.com/ishubtripathi",
     "tags": ["loader", "animation", "css", "modern-ui", "colorful"]
   },
   {
@@ -170,5 +170,16 @@
     "contributor": "Ansh Garg",
     "contributor_github": "https://github.com/Anshgarg9166",
     "tags": ["button", "bubble", "animation", "ui", "css"]
+  },
+  {
+    "name": "Pulsing Dots Loader",
+    "type": "animation",
+    "previewClass": "pulsing-dots",
+    "css": ".pulsing-dots {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 0.6em;\n  /* center inside preview area without touching global html/body */\n  margin: 0.75em auto;\n}\n\n.pulsing-dots div {\n  width: 0.8em;\n  height: 0.8em;\n  background-color: #2C74B3;\n  border-radius: 50%;\n  animation: pulse 0.8s infinite ease-in-out;\n}\n\n.pulsing-dots div:nth-child(2) { animation-delay: 0.2s; }\n.pulsing-dots div:nth-child(3) { animation-delay: 0.4s; }\n\n@keyframes pulse {\n  0%, 100% { opacity: 0.3; transform: scale(1); }\n  50% { opacity: 1; transform: scale(1.3); }\n}\n",
+    "html": "<div class=\"pulsing-dots\"><div></div><div></div><div></div></div>",
+    "js": "",
+    "contributor": "Shubhrant Tripathi",
+    "contributor_github": "https://github.com/ishubtripathii",
+    "tags": ["loader", "dots", "pulse", "minimal", "animation"]
   }
 ]
