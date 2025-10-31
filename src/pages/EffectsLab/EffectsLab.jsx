@@ -5,6 +5,18 @@ import { FaCopy, FaGithub } from "react-icons/fa";
 import effectsData from "../../data/effects.json";
 import { copyToClipboard } from "../../utils/copyToClipboard";
 
+// Highlight animation styles
+const highlightStyles = `
+  @keyframes highlightPulse {
+    0% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(147, 51, 234, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0); }
+  }
+  .highlight-animation {
+    animation: highlightPulse 2s ease-in-out;
+  }
+`;
+
 // Empty Block Component that fills remaining space
 const EmptyBlock = ({ height = "auto" }) => (
   <div
@@ -26,6 +38,7 @@ const EffectCard = ({
 }) => {
   return (
     <motion.div
+      id={effect.name?.toLowerCase().replace(/\s+/g, '-')}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
@@ -111,6 +124,34 @@ const EffectCard = ({
 const EffectsLab = () => {
   const [effects] = useState(effectsData);
   const [selectedType, setSelectedType] = useState("all");
+
+  useEffect(() => {
+    // Get the fragment identifier from the URL
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (hash) {
+      // Find the effect that matches the hash
+      const targetEffect = effects.find(effect => 
+        effect.name?.toLowerCase().replace(/\s+/g, '-') === hash ||
+        effect.path?.toLowerCase() === hash
+      );
+      
+      if (targetEffect) {
+        // If the effect exists but is filtered out, show its type
+        setSelectedType(targetEffect.type);
+        
+        // Scroll to the element after a short delay to ensure rendering
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Add a highlight effect
+            element.classList.add('highlight-animation');
+            setTimeout(() => element.classList.remove('highlight-animation'), 2000);
+          }
+        }, 100);
+      }
+    }
+  }, [effects]);
   const [activeTabs, setActiveTabs] = useState({});
   const previewRefs = useRef([]);
 

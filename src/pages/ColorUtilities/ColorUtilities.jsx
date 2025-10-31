@@ -1,5 +1,5 @@
 // src/pages/ColorUtilities/ColorUtilities.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import colorsData from "../../data/colors.json";
 import { copyToClipboard } from "../../utils/copyToClipboard";
@@ -10,6 +10,34 @@ const ColorUtilities = () => {
   const [colors] = useState(colorsData);
   const [selectedType, setSelectedType] = useState("all");
   const [copyFeedback, setCopyFeedback] = useState(null);
+
+  useEffect(() => {
+    // Get the fragment identifier from the URL
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (hash) {
+      // Find the color item that matches the hash
+      const targetColor = colors.find(color => 
+        color.name?.toLowerCase().replace(/\s+/g, '-') === hash ||
+        color.path?.toLowerCase() === hash
+      );
+      
+      if (targetColor) {
+        // If the color exists but is filtered out, show its type
+        setSelectedType(targetColor.type);
+        
+        // Scroll to the element after a short delay to ensure rendering
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Add a highlight effect
+            element.classList.add('highlight-animation');
+            setTimeout(() => element.classList.remove('highlight-animation'), 2000);
+          }
+        }, 100);
+      }
+    }
+  }, [colors]);
 
   const types = ["all", ...new Set(colors.map((color) => color.type))];
 
@@ -95,14 +123,27 @@ const ColorUtilities = () => {
           ))}
         </div>
 
+        {/* Highlight animation styles */}
+        <style jsx>{`
+          @keyframes highlightPulse {
+            0% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(147, 51, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0); }
+          }
+          .highlight-animation {
+            animation: highlightPulse 2s ease-in-out;
+          }
+        `}</style>
+
         {/* Colors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredColors.map((color, index) => (
             <motion.div
               key={color.name}
+              id={color.name?.toLowerCase().replace(/\s+/g, '-')}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.02,transition: { duration: 0.3 }} }
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 }} }
               transition={{
                 delay: index * 0.05,
                 duration: 0.3,
